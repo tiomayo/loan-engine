@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "43a9883e-1be6-4e88-b1be-e8678df2b06c",
+		"name": "Loan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8501115"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/all-loan",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"all-loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Propose",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"borrower_id\": 123,\r\n    \"principal_amount\": 10000000,\r\n    \"rate\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/propose",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"propose"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "approved",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "borrower_id",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "validator_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Hamba Allah/Pictures/file_example_JPG_100kB.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/approve",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"approve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"borrower_id\": 123,\r\n    \"invested_value\": 1000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/invest",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"invest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
